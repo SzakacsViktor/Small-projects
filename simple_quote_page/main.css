@@ -1,9 +1,11 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 .wrapper {
+  max-width: 1366px;
   width: 100%;
   height: 100vh;
   color: darkgray;
@@ -11,10 +13,17 @@
   color: #333;
   background: url('assets/freedom.jpg') no-repeat center;
   background-size: cover;
+  padding-top: 20vh;
 }
 
 .idezet {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-family: 'Julius Sans One', sans-serif;
-  padding: 8rem 7rem 4rem;
+  max-width: 60%;
+  margin: auto;
+}
+
+.author {
+  margin-top: 5vh;
+  font-size: 1rem;
 }
