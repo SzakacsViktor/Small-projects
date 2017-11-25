@@ -1,0 +1,33 @@
+        /* ==== GENERAL STYLES ==== */
+
+. {
+  display: block;
+}
+
+/* ---- LEFT NAV STYLES ---- */
+
+.leftnav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11rem;
+  
+  background: lightgreen; /*hogy látszódjon*/
+  
+}
+
+.navcolumn {
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  line-height: 1.3rem;
+}
+
+
+.leftnavlabel {
+  margin-top: 1rem;
+  border-bottom: 0.1rem solid lightblue;
+}
