@@ -2,6 +2,7 @@
 
 . {
   display: block;
+  font-size: .8rem;
 }
 
 /* ---- LEFT NAV STYLES ---- */
@@ -11,9 +12,8 @@
   top: 0;
   left: 0;
   width: 11rem;
-  
+  font-size: .8rem;
   background: lightgreen; /*hogy látszódjon*/
-  
 }
 
 .navcolumn {
@@ -26,8 +26,27 @@ a {
   line-height: 1.3rem;
 }
 
+a:hover {
+  text-decoration: underline;
+}
 
 .leftnavlabel {
-  margin-top: 1rem;
-  border-bottom: 0.1rem solid lightblue;
+  margin: 1rem 0 .3rem 0;
+  border-bottom: 0.1rem solid lightgrey;
 }
+
+.editlink {
+  text-align: right;
+}
+
+/* ---- LEFT BOX STYLES ---- */
+
+.leftbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15rem;
+  border: 0.1rem solid lightgrey;
+  background: lightblue; /*hogy látszódjon*/
+}
+
