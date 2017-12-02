@@ -1,12 +1,8 @@
         /* ==== GENERAL STYLES ==== */
 
 * {
-  /*display: block;*/
+  display: block;
   font-size: .8rem;
-}
-
-img {
-  max-width: 100%;
 }
 
 /* ---- LEFT NAV STYLES ---- */
@@ -59,19 +55,8 @@ a:hover {
   margin: .3rem;
 }
 
-table {
-  border: 1px solid red;
-}
-
-td {
-  /*display:inline-flex;*/
-  align-items: center;
-  border: 1px solid;
-}
-
 /* ---- ARICLE STYLES ---- */
 
 .content {
   margin-left: 11rem;
-  margin-right: 18rem;
 }
