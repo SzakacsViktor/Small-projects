@@ -1,6 +1,6 @@
         /* ==== GENERAL STYLES ==== */
 
-* {
+. {
   display: block;
   font-size: .8rem;
 }
@@ -11,9 +11,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 10rem;
-  padding-left: .5rem;
-  background: lightgrey; /*hogy látszódjon*/
+  width: 11rem;
+  font-size: .8rem;
+  background: lightgreen; /*hogy látszódjon*/
 }
 
 .navcolumn {
@@ -39,24 +39,14 @@ a:hover {
   text-align: right;
 }
 
-/* ---- RIGHT SIDE BOX STYLES ---- */
+/* ---- LEFT BOX STYLES ---- */
 
-.rightbox {
+.leftbox {
   position: absolute;
   top: 0;
   right: 0;
   width: 15rem;
   border: 0.1rem solid lightgrey;
-  padding: 0 1rem;
   background: lightblue; /*hogy látszódjon*/
 }
 
-.rightbox-label {
-  margin: .3rem;
-}
-
-/* ---- ARICLE STYLES ---- */
-
-.content {
-  margin-left: 11rem;
-}
