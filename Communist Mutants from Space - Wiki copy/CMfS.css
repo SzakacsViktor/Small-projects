@@ -1,8 +1,17 @@
         /* ==== GENERAL STYLES ==== */
 
-. {
-  display: block;
+* {
+  /*display: block;*/
   font-size: .8rem;
+}
+
+body {
+  /*float: left;
+  position: relative;*/
+}
+
+img {
+  max-width: 100%;
 }
 
 /* ---- LEFT NAV STYLES ---- */
@@ -11,9 +20,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 11rem;
-  font-size: .8rem;
-  background: lightgreen; /*hogy látszódjon*/
+  width: 10rem;
+  padding-left: .5rem;
+  background: lightgrey; /*hogy látszódjon*/
 }
 
 .navcolumn {
@@ -35,18 +44,40 @@ a:hover {
   border-bottom: 0.1rem solid lightgrey;
 }
 
-.editlink {
-  text-align: right;
+.left {
+  float: left;
 }
 
-/* ---- LEFT BOX STYLES ---- */
+.editlink {
+  float: right;
+}
 
-.leftbox {
-  position: absolute;
-  top: 0;
-  right: 0;
+/* ---- RIGHT SIDE BOX STYLES ---- */
+
+.rightbox {
+  float: right;
   width: 15rem;
   border: 0.1rem solid lightgrey;
-  background: lightblue; /*hogy látszódjon*/
+  padding: 0 1rem;
+  margin: 1rem;
+}
+
+.rightbox-label {
+  margin: .3rem;
+}
+
+.centre {
+  text-align: center;
+}
+
+
+/* ---- ARICLE STYLES ---- */
+
+.content {
+  margin-left: 11rem;
+  width: auto;
+  font-size: .9rem;
+  font-family: sans-serif;
+  
 }
 
