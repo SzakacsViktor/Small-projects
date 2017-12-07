@@ -2,7 +2,7 @@
 
 * {
   /*display: block;*/
-  font-size: .8rem;
+  font-size: .9rem;
 }
 
 body {
@@ -14,6 +14,32 @@ img {
   max-width: 100%;
 }
 
+
+/* ---- FIRST NAVbar STYLES ---- */
+
+.firstnavbar ul {
+  text-align: right;
+  margin-right: 1rem;
+}
+
+.grey {
+  color: gray;
+}
+
+.firstnavbar li {
+  font-size: .9rem;
+  line-height: 2rem;
+  margin: .2rem;
+  display: inline-block;  
+}
+
+.firstnavbar a {
+  text-decoration: none;
+  color: #0645ad;
+  display: block;
+}
+
+
 /* ---- LEFT NAV STYLES ---- */
 
 .leftnav {
@@ -22,7 +48,7 @@ img {
   left: 0;
   width: 10rem;
   padding-left: .5rem;
-  background: lightgrey; /*hogy látszódjon*/
+  /*background: lightgrey; /*hogy látszódjon*/
 }
 
 .navcolumn {
@@ -69,6 +95,11 @@ a:hover {
 .centre {
   text-align: center;
 }
+
+
+/* ---- SECOND NAVbar STYLES ---- */
+
+
 
 
 /* ---- ARICLE STYLES ---- */
