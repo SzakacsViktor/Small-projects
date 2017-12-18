@@ -40,6 +40,18 @@ h4 {
   color: gray;
 }
 
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
+.little {
+  font-size: .7rem;
+}
+
 
     /* ---- *HEAD general STYLES* ---- */
 
@@ -84,7 +96,7 @@ nav::after {
   display: block;
 }
 
-.active {
+.secondnavbar li active {
   border-bottom: 0;
 }
 
@@ -163,4 +175,22 @@ a:hover {
   font-size: .9rem;
   font-family: sans-serif;
 }
+
+    /* INSIDEBOX */
+.insidebox {
+  border: 0.05rem solid lightgrey;
+  display: inline-block;
+  line-height: 1.2rem;
+}
+
+.insidebox ul {
+  /*display: inline-flex;*/
+}
+
+.insidebox li {
+  display:;
+  list-style-type: decimal;
+ 
+}
+
 
