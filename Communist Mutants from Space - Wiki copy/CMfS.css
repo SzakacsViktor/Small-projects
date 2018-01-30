@@ -79,7 +79,7 @@ h1 {
 
 .head a {
   text-decoration: none;
-  color: #0645ad;e
+  color: #0645ad;
   display: block; 
 }
 
@@ -214,12 +214,12 @@ h2 {
 }
 
 h2::after {
-  content: "";
   display: block;
-  height: .05rem;
-  /*width: auto;*/
-  /*margin: 1.5rem auto;*/
-  background: white;
+  content: "";
+  background-color: lightgrey;
+  height: 1px;
+  width: 100%;
+  margin: .5rem auto;
 }
 
 h2 a {
@@ -257,6 +257,22 @@ h2 a {
   margin-top: 0;
 }
 
+.thirdbox {
+  padding: .6rem;
+  border: 0.05rem solid lightgrey;
+  line-height: 1.2rem;
+  background: #F5F5FF;
+}
+
+.thirdbox a {
+  background: #F5F5FF;
+}
+
+.thirdbox li {
+  background: #F5F5FF;
+  display: inline-block;
+  margin: 0 .5rem .3rem 0;
+}
 
 /* ---- FOOTER ---- */
 
