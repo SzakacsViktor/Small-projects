@@ -231,6 +231,17 @@ h2 a {
   background: white;
 }
 
+.references ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.external ul {
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+
     /* INSIDEBOX */
 .insidebox {
   padding: .6rem;
