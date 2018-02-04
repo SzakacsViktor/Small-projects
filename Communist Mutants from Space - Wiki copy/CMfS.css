@@ -1,6 +1,6 @@
         /* ==== GENERAL STYLES ==== */
 
-* {
+body {
   font-size: .9rem;
   font-family: sans-serif
 }
@@ -16,9 +16,10 @@ h3 {
 h4 {
   line-height: 1.6;
   font-size: .8rem;
-  color: black;
+  color: #000000;
   font-family: sans-serif;
   margin-bottom: 1rem;
+  background: #ffffff;
 }
 
 .floatleft {
@@ -30,7 +31,7 @@ h4 {
 }
 
 .gray {
-  color: gray;
+  color: #808080;
 }
 
 b {
@@ -60,9 +61,9 @@ h1 {
   font-size: 1.8rem;
   font-family: 'Georgia',serif;
   line-height: 1.3;
-  color: black
-  font-weight: normal;
-  border-bottom: 0.05rem solid lightgrey;
+  color: black;
+  font-weight: 400;
+  border-bottom: 0.05rem solid #d3d3d3;
 }
 
 .head li {
@@ -83,6 +84,10 @@ h1 {
   display: block; 
 }
 
+.mainhead {
+  background: #ffffff;
+}
+
 
 /* ---- FIRST NAVbar STYLES ---- */
 
@@ -92,7 +97,7 @@ h1 {
 
 .secondnavbar li {
   margin: 0;
-  border: 0.05rem solid lightblue;
+  border: 0.05rem solid #add8e6;
   border-top: 0;
 }
 
@@ -108,7 +113,7 @@ nav::after {
 
 input {
   margin: 0.3rem;
-  border: 0.05rem solid gray;
+  border: 0.05rem solid #808080;
 }
 
     /* ---- /*HEAD STYLES* ---- */
@@ -141,7 +146,7 @@ a:hover {
 
 .leftnavlabel {
   margin: 1rem 0 .3rem 0;
-  border-bottom: 0.05rem solid lightgrey;
+  border-bottom: 0.05rem solid #d3d3d3;
 }
 
 .floatleft {
@@ -158,7 +163,7 @@ a:hover {
 .rightbox {
   float: right;
   width: 15rem;
-  border: 0.05rem solid lightgrey;
+  border: 0.05rem solid #d3d3d3;
   padding: .1rem 1rem 0 1rem;
   margin: 1rem;
   background: #F5F5FF;
@@ -183,17 +188,17 @@ a:hover {
   width: auto;
   font-size: .9rem;
   font-family: sans-serif;
-  border-bottom: .05rem solid lightgrey;
-  border-left: .05rem solid lightgrey;
+  border-bottom: .05rem solid #d3d3d3;
+  border-left: .05rem solid #d3d3d3;
   background: white;
 }
 
 .content a {
-  background: white;
+  background: #ffffff;
 }
 
 .content li {
-  background: white;
+  background: #ffffff;
 }
 
 .paragraph {
@@ -202,21 +207,19 @@ a:hover {
 
 .paragraph p {
   margin: .5rem 0;
-  background: white;
+  background: #ffffff;
 }
 
 h2 {
   font-size: 1.2rem;
   margin-bottom: .5rem;
-  background: white;
-  /*width: auto;*/
-  /*display: block;*/
+  background: #ffffff;
 }
 
 h2::after {
   display: block;
   content: "";
-  background-color: lightgrey;
+  background-color: #d3d3d3;
   height: 1px;
   width: 100%;
   margin: .5rem auto;
@@ -224,11 +227,11 @@ h2::after {
 
 h2 a {
   font-size: .9rem;
-  background: white;
+  background: #ffffff;
 }
 
-.content h3 {
-  background: white;
+.ch3 {
+  background: #ffffff;
 }
 
 .references ol {
@@ -245,10 +248,10 @@ h2 a {
     /* INSIDEBOX */
 .insidebox {
   padding: .6rem;
-  border: 0.05rem solid lightgrey;
+  border: 0.05rem solid #d3d3d3;
   display: inline-block;
   line-height: 1.2rem;
-  background: white;
+  background: #ffffff;
 }
 
 .insidebox ol {
@@ -270,7 +273,7 @@ h2 a {
 
 .thirdbox {
   padding: .6rem;
-  border: 0.05rem solid lightgrey;
+  border: 0.05rem solid #d3d3d3;
   line-height: 1.2rem;
   background: #F5F5FF;
 }
@@ -294,7 +297,7 @@ h2 a {
   line-height: 1.1rem;
 }
 
-p1 {
+.p1 {
   font-size: .8rem;
   line-height: 3rem;
 }
@@ -304,4 +307,3 @@ p1 {
   margin: 0 .5rem 0 0;
   
 }
-
