@@ -1,0 +1,299 @@
+/* ---- GENERAL ---- */
+
+* {
+  box-sizing: border-box;
+  color: #444349;
+  font-family: 'Libre Baskerville', serif;
+}
+
+
+h1, h2, h3 {
+  margin-bottom: 1.5rem;
+  color: #444349;
+}
+
+h1, h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+}
+
+h1 {
+  color: #d2ba87;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+.wrapper {
+  background: url(https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png);
+  text-align: center;
+}
+
+img {
+  height: 8rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #bd806e;
+}
+
+a:hover {
+  color: #eda087;
+  transition: color .3s ease-in-out;
+}
+
+.location, .photos, .party, .program, .gifts, .quest, .contact {
+  max-width: 1600px;
+}
+
+/* ---- HEADER ---- */
+
+.cover {
+  background: url(MarcsiGergo.jpg) no-repeat 70% center/cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: table;
+}
+
+.headertextwrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.headertext {
+  background: hsla(100,0%,0%,.6);
+}
+
+@media (min-width: 768px) {
+  .headertext {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tagline {
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 8rem;
+    line-height: 9rem;
+  }
+}
+
+header .tagline,
+.date{
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  color: lightgray;
+}
+
+.tagline::after {
+  display: block;
+  content: "";
+  background-color: #d2ba87;
+  height: 1px;
+  width: 10rem;
+  margin: 1rem auto;
+}
+
+.date::before,
+.date::after {
+  display: inline-block;
+  content: "";
+  background-color: lightgray;
+  height: 1px;
+  width: 1.5rem;
+  margin: 1rem auto;
+  vertical-align: middle;
+}
+
+
+/* ---- LOCATIONS ---- */
+
+.location {
+  margin: 3rem;
+}
+
+.location h3 {
+ color: #444349;
+}
+
+.location p {
+  font-family: 'Muli', sans-serif;
+  color: #444349;
+}
+
+@media (min-width: 768px) {
+  .ceremony, .photos, .party {
+    display: inline-block;
+    width: 30%;
+    margin: .5rem auto;
+    vertical-align: top;
+  }
+}
+
+@media (max-width: 768px) {
+  .ceremony, .photos, .party {
+    display: block;
+  }
+  .ceremony::after,
+  .photos::after,
+  .party::after {
+    display: block;
+    content: "";
+    background-color: black;
+    height: 3px;
+    width: 25vw;
+    margin: 1.5rem auto;
+  }
+}
+
+
+/* ---- PROGRAM ---- */
+
+.program {
+  color: #d2ba87;
+  background: hsla(100,0%,0%,.6);
+  padding: 2rem;
+  font-family: 'Muli', sans-serif;
+}
+
+.program h2{
+  color: #d2ba87;
+}
+
+.progline {
+  color: #d2ba87;
+  font-style: italic;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.program li {
+  color: #d2ba87;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .progline, .program li {
+    text-align: center;
+  }
+}
+
+/* ---- GIFTS ---- */
+
+.gifts {
+  margin: 3rem;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.giftline {
+  margin-bottom: 1.5rem;
+}
+
+.gifts p {
+  color: #444349;
+}
+
+
+/* ---- Questions & Answers ---- */
+
+.quest {
+  background: hsla(100,0%,0%,.6);
+  padding: 2rem;
+  color: #d2ba87;
+  font-family: 'Muli', sans-serif;
+}
+
+.quest h2, h3, p {
+  color: #d2ba87;
+}
+
+.quest p {
+  text-align: left;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.answer {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .travel, .food, .others {
+    display: inline-block;
+    width: 30%;
+    margin: .5rem auto;
+    padding: .5rem;
+    vertical-align: top;
+  }
+}
+
+@media (max-width: 992px) {
+  .travel, .food, .others {
+    display: block;
+  }
+  .travel::after,
+  .food::after,
+  .others::after{
+    display: block;
+    content: "";
+    background-color: #d2ba87;
+    height: 3px;
+    width: 50vw;
+    margin: 1.5rem auto;
+  }
+}
+
+figure {
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  position: relative;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* ---- CONTACTS ---- */
+
+.contact {
+  margin: 3rem;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.contact p {
+  color: #444349;
+  margin-bottom: 1.5rem;
+}
+
+
+/* ---- FOOTER ---- */
+
+footer {
+  background: #606060;
+  padding: .5rem;
+}
+
+footer p {
+  color: white;
+}
+
