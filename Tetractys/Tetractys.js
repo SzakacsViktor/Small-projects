@@ -1,15 +1,16 @@
-﻿var canvas = document.getElementById('myCanvas');
-var context = canvas.getContext('2d');
+var canvas = document.getElementById('myCanvas');
+//var context = canvas.getContext('2d');
 
-var x; // jobbra
-var y; // lefelé
-var a; // az oldal hossza
+var x=250; // jobbra
+var y=20; // lefel�
+var a=100; // a az oldal hossza
+var color='rgba(255,0,0,.7)';
 
-function triangle(x, y, a) {
+function tetractys(x, y, a, color) {
   context.beginPath();
-  context.fillStyle = 'rgba(255, 255, 0, 0.5)';
+  context.fillStyle = color;
   context.moveTo(x, y);
-  context.strokeStyle = 'gray';
+  context.strokeStyle = color;
   context.lineTo(x - a / 2, y + (a * Math.sqrt(3) / 2));
   context.lineTo(x + a / 2, y + (a * Math.sqrt(3) / 2));
   context.lineTo(x, y);
@@ -18,6 +19,24 @@ function triangle(x, y, a) {
   return;
 }
 
-triangle(230, 160, 50);
-triangle(270, 100, 50);
-triangle(200, 50, 150);
+for (var i=1; i<=3; i++) {
+  console.log('i ' + i);
+  console.log('x ' + x);
+  for (var j=1; j<=i; j++) {
+    console.log('y ' + y);
+    console.log('j ' + j);
+    //color='red';
+    callDrawFunction:
+    tetractys(x, y, a, color);
+    x+=102;
+  }
+  y+=90;
+    switch (i) {
+    case 1: x=198
+      color='rgba(0,255,0,.7)';
+      continue;
+    case 2: x=146;
+      color='rgba(0,0,255,.7)';
+      //break;
+  }
+}
