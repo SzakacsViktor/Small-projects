@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('http://i.imgur.com/GsUL6FT.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-size: large;
+}
+
+.fooldal {
+  width: 700px;
+  max-width: calc(100vw - 10px);
+  background-color: hsla(0, 0%, 100%, .5);
+  border-radius: 10px;
+  box-shadow: hsla(0, 0%, 0%, .8) 10px 10px 80px;
+}
+
+.head {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.name {
+  margin-top: 25%;
+}
+
+.profilkep {
+  width: 200px;
+  height: 200px;
+  border-radius: 35%;
+  margin-top: 5px;
+  padding: 1px;
+}
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5% 10%;
+  border-top: 1px solid hsla(0, 0%, 30%, .8);
+}
+
+.links {
+  text-align: center;
+  border-top: 1px solid hsla(0, 0%, 30%, .8);
+}
+
+#link {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+}
+#link:hover {
+  color: white;
+}
+
+.head, .details {
+  margin-bottom: 5%;
+}
+
+.pictures {
+  margin-top: 5%;
+}
+
+.pic {
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(50%);
+  width: 50px;
+}
+.pic:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+.profilkep {
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(50%);
+  
+}
+.profilkep:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  box-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px darkgreen;
+}
