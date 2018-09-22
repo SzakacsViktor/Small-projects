@@ -15,9 +15,10 @@ function draw() {
 
 	ctx.translate(300, 300);
 	setInterval(function () {
+		ctx.fillStyle = 'white';
+		ctx.strokeStyle = colors[l];
 		ctx.rotate(i * 3 * Math.PI / 180);
 		ctx.rect(-200, -200, 400, 400);
-		ctx.strokeStyle = colors[l];
 		ctx.stroke();
 		i++;
 		if (i % 9 === 0) {l++}

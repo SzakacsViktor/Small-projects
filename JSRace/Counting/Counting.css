@@ -1,0 +1,12 @@
+#enterIntegerForm {
+	width: 300px;
+}
+
+#enterIntegerFormLegend {
+	font-size: 1.2rem;
+	font-style: bold;
+}
+
+#result {
+	margin: 0.5rem;
+}
