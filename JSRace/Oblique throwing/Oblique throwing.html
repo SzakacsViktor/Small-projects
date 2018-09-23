@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Oblique throwing</title>
+	
+<script type="text/javascript">
+	function counting(v0) {
+		var alphaRad = (alpha / 180 * Math.PI); //a szög radiánná alakíetása
+		
+		var d = ((v0 * v0 * Math.sin(2 * alphaRad)) / 9.81);
+		var h = ((v0 * v0 * Math.sin(alphaRad) * Math.sin(alphaRad)) / (2 * 9.81));
+		alert('A dobás maximális magassága: ' + h.toFixed(2) + ' A távolsága pedig: ' + d.toFixed(2));
+	}
+</script>
+
+</head>
+<body>
+	
+<script type="text/javascript">
+	var v0 = parseFloat(prompt("Írd be, hogy milyen gyorsan dobod el a labdát: "));
+	var alpha = parseFloat(prompt("És azt hogy milyen szögben: "));
+	
+	if ((alpha < 90 && alpha > 0) && v0 > 0 ) {
+		counting(v0, alpha);
+	} else if (v0 <= 0) {
+		alert('Az erő legyen nagyobb nullánál!');
+	}
+	if (alpha > 90 || alpha <= 0) {
+		alert('A szög legyen 0 és 90 fok között!');
+	}
+</script>
+	
+</body>
+</html>
+
+
+<!-- Egy egyszerűsített fizikai rendszerben a testekre csak a gravitáció hat, melynek mértéke 9.81 m/s2. Egy ilyen rendszerben egy eldobott labda röppályálya könnyen modellezhető. Készítsetek egy programot, ami bekéri a labda eldobását jelző ferde hajítás erősségét (v0, pozitív szám) és szögét (α, 0 és 90 fok között), és kiszámolja a dobás maximális magasságát, illetve távolságát. -->
