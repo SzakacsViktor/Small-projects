@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+<script type="text/javascript">
+
+</script>
+	
+<title>Divisors</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	var nmb = prompt('Kérek egy pozitív egész számot: ');
+	var divisors = new Array();
+	
+	if (isNaN(nmb) || nmb <= 0 || nmb != parseInt(nmb)) {
+		alert('Pozitív egész számot kérek !!!')
+	} else {
+		nmb =  parseInt(nmb);
+		for (var i = nmb; i > 0; i--) {
+			if (nmb % i == 0) {
+				divisors.push(i);
+			}
+		}
+		if (divisors.length > 0) {
+			var divisorsString = divisors.join(", ");
+			alert('A(z) ' + nmb + ' osztói a következők: ' + divisorsString);
+		}
+	}
+
+</script>
+
+</body>
+</html>
+
+<!-- Készítsetek egy programot, amely bekér egy számot, majd megjeleníti az összes osztóját.  -->

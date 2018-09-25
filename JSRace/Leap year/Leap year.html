@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+<script type="text/javascript">
+
+</script>
+	
+<title>Leap year</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	var year = prompt('Kérek egy évszámot: ');
+	
+	//ellenőrzi, hogy évszámot kapott-e
+	if (isNaN(year) || parseFloat(year) <= 0 || parseInt(year) !== parseFloat(year)) {
+		alert('Ez nem is évszám.');
+	} else {
+		year == parseInt(year);
+		//innentől vizsgálja, hogy szökőév-e
+		if ((year %4 == 0) && (year %100 != 0)) {
+			alert(year + ' szökőév.');
+		} else if ( (year %400 == 0)) {
+			alert(year + ' szökőév.');
+		} else {alert(year + ' NEM szökőév.')}
+		
+	} 
+
+</script>
+
+</body>
+</html>
+
+<!-- Olvassatok be egy évszámot. A program írja ki, hogy az adott év szökőév-e.  -->

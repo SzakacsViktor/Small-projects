@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Perfect numbers</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	var perfectNums = new Array;
+	var divisionsSum;
+	
+	for (var i = 1; i <= 10000; i++) {
+		divisionsSum = 0;
+		for (var j = (i - 1); j >= 1; j--) {
+			if (i % j == 0) {
+				divisionsSum = divisionsSum + j;
+			}
+		}
+		if (divisionsSum == i) {
+			perfectNums.push(i);
+		}
+	}
+	
+	alert('A 10ezer alatti tökéletes számok a következők: ' + perfectNums.join(', '));
+	
+</script>
+	
+</body>
+</html>
+
+<!-- Készítsetek egy programot, amely meghatározza a 10000-nél kisebb tökéletes számokat. -->
