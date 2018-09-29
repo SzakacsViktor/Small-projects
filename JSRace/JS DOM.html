@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<title>JS DOM exercise</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	
+<script type="text/javascript">
+
+</script>
+
+</head>
+
+<body>
+	
+	<h3>3 JS exercises with DOM</h3>
+	<p>1. Create a document containing a paragraph of text that you create and append using the DOM. Create a link immediately after this paragraph that links to a site of your choice, also using the DOM. Make sure that all the elements have id attributes.</p>
+	<p>2. Create a document with any elements you like, or use an existing HTML document that contains id attributes in its elements. Retrieve two of those lements, make changes to them, and put them back into the document. The type of change you make depends on the type of element you choose.</p>
+	<p>3. Create a document by using the DOM that contains a table with at least two columns and two rows. Add some text in the table cells.</p>
+	
+<script type="text/javascript">
+	//create 2 elements
+	var useelement = document.createElement("p");
+	document.body.appendChild(useelement);
+	useelement.setAttribute("id", "newelement");
+	useelement.appendChild(document.createTextNode("Helló Világ!"));
+	
+	useelement = document.createElement("a");
+	document.body.appendChild(useelement);
+	useelement.setAttribute("id", "newlink");
+	useelement.setAttribute("href", "D:/\GitHub Repo/\Small-projects/\MarcsiGeri/\MarcsiGeri.html");
+	useelement.appendChild(document.createTextNode("Marcsi Geri"));
+	
+	alert("p text: " + document.getElementById("newelement").innerHTML);
+	alert("a text: " + document.getElementById("newlink").innerHTML);
+	alert("a href: " + document.getElementById("newlink").href);
+	//END create 2 elements
+	
+	
+	//change this 2 elements
+	useelement = document.getElementById("newelement");
+	useelement.innerHTML = "Szia Föld!";
+	
+	useelement = document.getElementById("newlink");
+	useelement.innerHTML = "Fordító";
+	useelement.setAttribute("href", "https://translate.google.hu/?hl=hu&tab=TT");
+	//END change this 2 elements
+	
+	
+	//create table
+	useelement = document.createElement("table");
+	document.body.appendChild(useelement);
+	useelement.setAttribute("id", "newtable");
+	
+	for (var i = 1; i <3; i++) {
+		useelement = document.createElement("th");
+		document.body.appendChild(useelement);
+		useelement.appendChild(document.createTextNode(i + ". oszlop"));	
+	}
+	
+	for (var i = 1; i <3; i++) {
+		useelement = document.createElement("tr");
+		document.body.appendChild(useelement);
+
+		useelement = document.createElement("td");
+		document.body.appendChild(useelement);
+		useelement.appendChild(document.createTextNode(i + " cella"));
+
+		useelement = document.createElement("td");
+		document.body.appendChild(useelement);
+		useelement.appendChild(document.createTextNode(i + " cella"))
+	}
+	//END create table
+	
+</script>
+	
+</body>
+</html>
