@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>If/Else</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	var n = prompt('Please enter a positive integer: ');
+	
+	if (isNaN(n) || n <=0 || n != parseInt(n)) {
+		alert('The number must be a positive integer !!!')
+	} else {
+		if (n %2 !== 0) {
+			alert(n + ' is odd and Weird.');
+		} else if (n >= 2 && n <= 5) {
+			alert(n + ' is even and in the inclusive range of 2 to 5 and Not Weird.');
+		} else if (n >= 6 && n <= 20) {
+			alert(n + ' is even and in the inclusive range of 6 to 20 and Weird.');
+		} else if (n > 20) {
+			alert(n + ' is even and greater than 20 and Not Weird.');
+		}
+	}
+
+</script>
+
+</body>
+</html>
+
+<!-- In this challenge, we test your knowledge of using if-else conditional statements to automate decision-making processes.
+
+Task
+Given an integer, n, perform the following conditional actions:
+
+If n is odd, print 'Weird'.
+If n is even and in the inclusive range of 2 to 5, print 'Not Weird'.
+If n is even and in the inclusive range of 6 to 20, print 'Weird'.
+If n is even and greater than 20, print 'Not Weird'.
+Complete the stub code provided in your editor to print whether or not n is weird.
+
+Input Format
+A single line containing a positive integer, n.
+
+Output Format
+Print 'Weird' if the number is weird; otherwise, print 'Not Weird'.  -->

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>String Reverse</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var b = "";
+	var A = (prompt("Enter a word or sentence!")).toLowerCase(); 
+	for (var i = A.length - 1; i >= 0; i--) {
+		b = b + A.charAt(i);
+	}
+	if (A == b) {
+		alert("Yes, it is a palindrome.");
+	} else {alert("No, it is not a palindrome.");}
+
+</script>
+
+</body>
+</html>
+
+<!-- Given a string A, print 'Yes' if it is a palindrome, print 'No' otherwise.
+
+Constraints
+
+A will consist at most lower case english letters.  -->

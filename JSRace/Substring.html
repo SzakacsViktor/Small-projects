@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Substring</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var s = "";
+	var startAndEnd, start, end;	
+	var ok = false;
+	
+	
+	do {	//szöveg bekérése, ellenőrzése
+		s = prompt('Enter a short text please. ');
+		if (s.length < 1 || s.length > 100) {
+			alert('The text must be at least 1 and maximum 100 character.')
+		}
+	} while (s.length < 1 || s.length > 100);
+	
+	do{	//kezdő és végérték bekérése, ellenőrzése
+		startAndEnd = prompt('Please enter two space-separated integers.');
+		if (startAndEnd.indexOf(" ") == -1) {
+			alert("Must be SPACE-SEPARATRED!");
+		} else if (startAndEnd.lastIndexOf(" ") == (startAndEnd.length -1) || startAndEnd.indexOf(" ") == 0) {
+			alert("The space must be between the two numbers!");
+		} else {
+			start = startAndEnd.substr(0, startAndEnd.indexOf(" "));
+			end = startAndEnd.substr(startAndEnd.indexOf(" "), startAndEnd.length);
+			if (isNaN(start) || isNaN(startAndEnd.substr(end))) {
+			alert("They are must be numbers!");
+			} else if (start != parseInt(start) || end != parseInt(end)) {
+				alert("They are must be INTEGERS!");
+			} else {
+				start = parseInt(start);
+				end = parseInt(end);
+				if (start >= end) {
+					alert("The second number must be bigger than the first.");
+				} else if (end > s.length) {
+					alert("The second number must be smaller than the length of the text.");
+				} else {ok = true};
+			}
+		} 
+	} while (ok !== true);
+	
+	
+	var useelement = document.createElement("p");
+	document.body.appendChild(useelement);
+	useelement.appendChild(document.createTextNode("A kivágott sövegréslet a következő: '" + (s.substr((start - 1), (end - start))) + "'"));
+
+</script>
+
+</body>
+</html>
+
+<!-- Given a string, s, and two indices, start and end, print a substring consisting of all characters in the inclusive range from start to end.
+
+Input Format
+The first line contains a single string denoting s.
+The second line contains two space-separated integers denoting the respective values of start and end.
+
+Constraints
+
+1 <= |s| <= 100
+0 <= start <= end <= n
+String s consists of English alphabetic letters (i.e., [a-zA-Z]) only.
+
+Output Format
+Print the substring in the inclusive range from start to end - 1.  -->

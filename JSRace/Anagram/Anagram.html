@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Anagram</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+
+	var wordArray = new Array;
+	var word1 = (prompt('Kérek egy szót.')).toLowerCase();
+	var word2 = (prompt('Kérek egy másikat is.')).toLowerCase();
+	
+	//az első szó betűinek abc sorba rendezése
+	for (var i = 0; i <= word1.length-1; i++) {
+		wordArray.push(word1.charAt(i));
+	}
+	wordArray = wordArray.sort();
+	word1 = "";
+	for (var i = 0; i <= wordArray.length-1; i++) {
+		word1 = word1 + wordArray[i];
+	}
+
+	wordArray.length = 0;
+	//a második szó betűinek abc sorba rendezése
+	for (var i = 0; i <= word2.length-1; i++) {
+		wordArray.push(word2.charAt(i));
+	}
+	wordArray = wordArray.sort();
+	word2 = "";
+	for (var i = 0; i <= wordArray.length-1; i++) {
+		word2 = word2 + wordArray[i];
+	}
+	
+	//döntés és válaszadás
+	if (word1 == word2) {
+		alert("A két szó egymás anagrammái.");
+	} else {alert("A két szó nem egymás anagrammái.");}
+	
+	
+</script>
+	
+</body>
+</html>
+
+<!-- Készítsetek egy programot, amely két bekért szóról eldönti, hogy egymás anagrammái-e.  -->

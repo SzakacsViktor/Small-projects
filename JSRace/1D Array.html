@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>1D Array</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var n = prompt('How many integers sfould I hold? ');
+	var a = new Array;
+	
+	if (isNaN(n) || n <= 0 || n != parseInt(n)) {
+		alert('The number must be a positive integer !!!')
+	} else {
+		
+		a.push(n);
+		var useelement = document.createElement("p");
+		document.body.appendChild(useelement);
+		useelement.setAttribute("id", "valueOfElementA");
+
+		for (var i = 1; i <= n; i++) {
+			a.push(i);
+			useelement = document.createElement("p");
+			document.body.appendChild(useelement);
+			useelement.setAttribute("id", i + ". element");
+			useelement.appendChild(document.createTextNode("A tömb " + i + ". eleme: " + a[i]));
+		}
+		document.getElementById("valueOfElementA").innerHTML = ("A tömb elemszáma: " + (a.length));
+	}
+
+</script>
+
+</body>
+</html>
+
+<!-- Create an array, a, capable of holding n integers.
+Using a loop, save each sequential value to its corresponding location in the array. For example, the first value must be stored in a0, the second value must be stored in a1, and so on.
+Good luck!
+
+Input Format
+The first line contains a single integer, n, denoting the size of the array. 
+Each line i of the n subsequent lines contains a single integer denoting the value of element ai.
+
+Output Format
+Loop through array a and print each sequential element on a new line.  -->
