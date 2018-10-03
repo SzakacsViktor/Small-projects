@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>2D Array</title>
+</head>
+<body>
+	
+	<h3>This is a 6x6 2D array. Filled with random integers between -9 and 9 inclusive.</h3>
+	<table id="hgTable">
+		<th>1. col</th>
+		<th>2. col</th>
+		<th>3. col</th>
+		<th>4. col</th>
+		<th>5. col</th>
+		<th>6. col</th>
+	</table>
+
+<script type="text/javascript">
+	var newElement;
+	var hgSum;
+	var hgMaxSum = -64;
+	var hourglass = [
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	]
+	
+	//a tömb feltöltése és kiírása tábázatban
+	for (var i= 0; i < 6; i++) {
+		newElement = document.createElement("tr");
+		document.getElementById("hgTable").appendChild(newElement);
+		newElement.setAttribute("id", ("hg" + i));
+		for (var j = 0; j < 6; j++) {
+			newElement = document.createElement("td");
+			document.getElementById("hg" + i).appendChild(newElement);
+			newElement.setAttribute("id", ("hg" + (i) + (j)));
+			hourglass [i][j] = Math.round(Math.random()*18)-9;
+			document.getElementById("hg" + (i) + (j)).innerHTML = hourglass [i][j];
+		}	
+	}
+	
+	for (var i = 0; i < 4; i++) {
+		for (var j = 0; j < 4; j++) {
+			hgSum = ((hourglass [i][j]) + (hourglass [i][j + 1]) + (hourglass [i][j + 2]) + (hourglass [i + 1][j + 1]) + (hourglass [i + 2][j]) + (hourglass [i + 2][j + 1]) + (hourglass [i + 2][j + 2]));
+			if (hgSum > hgMaxSum) {hgMaxSum = hgSum};
+		}
+	}
+	
+	document.write("<br>The largest sum among all the hourglasses in the array: " + hgMaxSum);
+	
+</script>
+
+</body>
+</html>
+
+<!-- ou are given a 6x6 2D array. An hourglass in an array is a portion shaped like this:
+
+
+     a b c
+       d
+     e f g
+For example, if we create an hourglass using the number 1 within an array full of zeros, it may look like this:
+
+
+     1 1 1 0 0 0
+     0 1 0 0 0 0
+     1 1 1 0 0 0
+     0 0 0 0 0 0
+     0 0 0 0 0 0
+     0 0 0 0 0 0
+Actually, there are many hourglasses in the array above. The three upper leftmost hourglasses are the following:
+
+
+     1 1 1     1 1 0     1 0 0
+       1         0         0
+     1 1 1     1 1 0     1 0 0
+
+The sum of an hourglass is the sum of all the numbers within it. The sum for the hourglasses above are 7, 4, and 2, respectively.
+
+In this problem you have to print the largest sum among all the hourglasses in the array.
+
+Input Format
+There will be exactly 6 lines, each containing 6 integers separated by spaces. Each integer will be between -9 and 9 inclusive.
+
+Output Format
+Print the answer to this problem on a single line.  -->
