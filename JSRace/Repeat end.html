@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Repeat end</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+
+	var n;
+	var partOfTxt = "";
+	var txt = prompt("Please enter a short text!");
+	
+	do {
+		n = prompt("Please enter an integer between 1 and " + txt.length + "!");
+	} while (n < 1 || n > txt.length || isNaN(n) || n != parseInt(n));
+	n = parseInt(n);
+	
+	for (var i = 1; i <= (n + 1); i++) {
+		partOfTxt = partOfTxt + txt.substr((txt.length - n), n);
+	}
+	
+	document.write(partOfTxt);
+	
+</script>
+
+</body>
+</html>
+
+<!-- Given a string and an int n, print a string made of n+1 repetitions of the last n characters of the string. You may assume that n is between 0 and the length of the string, inclusive.
+
+HINT: Watch out for spaces!
+
+Input Format
+There are two lines of input:
+The first line contains a string.
+The second line contains an integer.
+
+Output Format
+A single String -->

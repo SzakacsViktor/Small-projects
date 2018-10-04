@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Loops II - Counting</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	var q = 0;
+	var a = 0;
+	var b = 0;
+	var n = 0;
+	var result = 0;
+	
+	do {
+		q = prompt("How many times to calculate this formula? Please enter a pisitive integer maximum 500");
+	} while (q < 0 || q > 500 || isNaN(q) || q != parseInt(q));
+	q = parseInt(q);
+	document.writeln(q + "<br>");
+	
+	for (var j = 1; j <= q; j++) {
+	
+		do {
+			a = prompt("Please enter a pisitive integer less than 14");
+		} while (a < 0 || a >= 14 || isNaN(a) || a != parseInt(a));
+		a = parseInt(a);
+
+		do {
+			b = prompt("Please enter a pisitive integer maximum 50");
+		} while (b < 0 || b > 50 || isNaN(b) || b != parseInt(b));
+		b = parseInt(b);
+
+		do {
+			n = prompt("Please enter an integer between " + a + " and 15.");
+		} while (n < a || n > 15 || isNaN(n) || n != parseInt(n));
+		n = parseInt(n);
+
+		result = a;
+		for (var i = 0; i < n; i++) {
+			result = (result + Math.pow(2,i) * b);
+			document.writeln(result);
+		}
+		
+		document.write("<br>");
+	}
+	
+	
+</script>
+
+</body>
+</html>
+
+<!-- Loops II
+Task
+We use the integers a, b, and n to create the following series:
+
+     (a + 20 x b), (a + 20 x b + 21 x b), ... ,(a + 20 x b + 21 x b + ... + 2n-1 x b)
+
+You are given q queries in the form of a, b, and n. For each query, print the series corresponding to the given a, b, and n values as a single line of n space-separated integers.
+
+Input Format
+The first line contains an integer, q, denoting the number of queries. Each line i of the q subsequent lines contains three space-separated integers describing the respective ai, bi, and ni values for that query.
+
+Constraints
+
+0 <= q <= 500
+0 <= a, b <= 50
+a <= n <= 15
+
+Output Format
+For each query, print the corresponding series on a new line. Each series must be printed in order as a single line of n space-separated integers.
+
+
+Hint
+Make sure not to print any extra spaces at the ends of the lines!  -->

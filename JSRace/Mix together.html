@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Mix together</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	
+	var result = "";
+	var a = prompt("Please enter a word!");
+	var b = prompt("Please enter another too!");
+	
+	if (a.length < b.length) {
+		x = a.length;
+	} else {x = a.length};
+	
+	for (var i = 0; i < x; i++) {
+		result = result + b.charAt(i);
+		result = result + a.charAt(i);
+	}
+	
+	if (a.length < b.length) {
+		result = result + b.substr(i, (b.length - i));
+	} else {result = result + a.substr(i, (a.length - i));};
+	
+	document.write("The mixed word: " + result);
+			
+</script>
+
+</body>
+	
+	<p>Given two strings, a and b, create a bigger string made of the first char of b, the first char of a, the second char of b, the second char of a, and so on. Any leftover chars go to the end of the result.</p>
+	<p>HINT: Watch out for spaces!</p>
+	<p>Input Format: There are two lines of input, both contain a String.</p>
+	<p>Output Format: A single String</p>
+</html>
+
+<!-- Given two strings, a and b, create a bigger string made of the first char of b, the first char of a, the second char of b, the second char of a, and so on. Any leftover chars go to the end of the result.
+
+HINT: Watch out for spaces!
+
+Input Format
+There are two lines of input, both contain a String.
+
+Output Format
+A single String -->
