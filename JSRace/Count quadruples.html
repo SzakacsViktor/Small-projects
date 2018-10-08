@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Count quadruples</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	
+	var word = prompt ("Please enter a short text!");
+	var numOfQuadruples = 0;
+	
+	for (var i = 0; i < word.length; i++) {
+		if (word.charAt(i) == word.charAt(i - 1) && word.charAt(i - 1) == word.charAt(i - 2) && word.charAt(i - 2) == word.charAt(i - 3)) {
+			numOfQuadruples++;
+		}
+	}
+	
+	document.write(numOfQuadruples);	
+	
+</script>
+	
+	<p>We'll say that a "quadruple" in a string is a char appearing four times in a row. Print the number of quadruples in the given string. The quadruples may overlap.</p>
+	<p>Input Format: A single line with a string.</p>
+	<p>Output Format: A number.</p>
+
+</body>
+</html>
+
+<!-- We'll say that a "quadruple" in a string is a char appearing four times in a row. Print the number of quadruples in the given string. The quadruples may overlap.
+
+HINT: Watch out for spaces!
+
+Input Format
+A single line with a string.
+
+Output Format
+A number. -->

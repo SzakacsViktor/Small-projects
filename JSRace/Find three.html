@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Find three</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	
+	var ints = new Array;
+	var exactly3Times = false;
+	var lengthOfInts = prompt ("How many numbers do you want?");
+	
+	document.write(lengthOfInts + "<br><br>");
+	
+	for (i = 0; i < lengthOfInts; i++) {
+		ints[i] = Math.round(Math.random()*9)+1;
+		document.write(ints[i] + "<br>");
+		if (ints[i] == 3 && ints[i - 1] == 3 && ints[i - 2] == 3) {
+			exactly3Times = true;
+			break;
+		}
+	}
+	
+	if (exactly3Times == true) {
+		document.write("<br>false");
+	} else {document.write("<br><br>true")};
+	
+</script>
+	
+	<p>Given an array of ints, print 'false' if the value '3' appears in the array exactly 3 times and no '3's are next to each other. Otherwise print 'true'.</p>
+	<p>Input Format: The first line contains a single integer, n, denoting the size of the array. Each line i of the n subsequent lines contains a single integer denoting the value of the array at position i.</p>
+	<p>Output Format: Simply the word 'true' or 'false'</p>
+
+</body>
+</html>
+
+<!-- Given an array of ints, print 'false' if the value '3' appears in the array exactly 3 times and no '3's are next to each other. Otherwise print 'true'.
+
+Input Format
+The first line contains a single integer, n, denoting the size of the array. Each line i of the n subsequent lines contains a single integer denoting the value of the array at position i.
+
+Output Format
+Simply the word 'true' or 'false'. -->

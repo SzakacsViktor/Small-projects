@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Largest block</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	
+	var word = prompt ("Please enter a short text!");
+	var  lengthOfBlock = 1;
+	var largestBlock = 1;
+	
+	for (var i = 0; i < word.length; i++) {
+		if (word.charAt(i) == word.charAt(i - 1)) {
+			lengthOfBlock++;
+			if (lengthOfBlock > largestBlock) {
+				largestBlock++;
+			}
+		} else {lengthOfBlock = 1}
+	}
+	
+	document.write((word) + "<br><br>");
+	document.write(largestBlock);
+	
+</script>
+	
+	<p>We call a sequence of identical characters a 'block'. Print the length of the largest 'block' in the given string.</p>
+	<p>Input Format: A single line with a string.</p>
+	<p>Output Format: A number.</p>
+
+</body>
+</html>
+
+<!-- We call a sequence of identical characters a 'block'. Print the length of the largest 'block' in the given string.
+
+HINT: Watch out for spaces!
+
+Input Format
+A single line with a string.
+
+Output Format
+A number. -->

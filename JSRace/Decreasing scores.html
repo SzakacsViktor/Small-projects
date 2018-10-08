@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Decreasing scores</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+
+	var scores = new Array;
+	var lenghtOfScores;
+	var equalOrLower = true;
+	
+	do {
+		lenghtOfScores = parseInt(prompt("How many numers do you want?"));
+	} while (isNaN(lenghtOfScores));
+	
+	document.writeln(lenghtOfScores + "<br><br>");
+
+	if (lenghtOfScores > 0) {
+		scores[0] = (Math.round(Math.random()*10));
+		document.writeln(scores[0]+ "<br>");
+		for ( var i = 1; i < lenghtOfScores; i++) {
+			scores[i] = (Math.round(Math.random()*10));
+			document.writeln(scores[i]+ "<br>");
+			if (scores[i] > scores[i - 1]) {
+				equalOrLower = false;
+			}
+		}
+	
+		document.writeln("<br>" + equalOrLower);
+	}
+	
+	
+</script>
+	
+	<p>Given an array of scores, print 'true' if each score is equal to or lower than the one preceding it</p>
+	<p>Input Format: The first line contains a single integer, n, denoting the size of the array. Each of the subsequent n lines contains a single integer denoting the value of the array at the next position.</p>
+	<p>Constraint: The length of the array will be 2 or more</p>
+	<p>Output: Simply the word 'true' or 'false'</p>
+
+</body>
+</html>
+
+<!-- Given an array of scores, print 'true' if each score is equal to or lower than the one preceding it.
+
+Input Format
+The first line contains a single integer, n, denoting the size of the array. Each of the subsequent n lines contains a single integer denoting the value of the array at the next position.
+
+Constraint
+The length of the array will be 2 or more.
+
+Output
+Simply the word 'true' or 'false'. -->

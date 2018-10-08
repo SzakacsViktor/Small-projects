@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Fewer 1s than 4s</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	
+	var ints = new Array;
+	var quantity1 = 0;
+	var quantity4 = 0;
+	var lengthOfInts = prompt ("How many numbers do you want?");
+	
+	document.write(lengthOfInts + "<br><br>");
+	
+	for (i = 0; i < lengthOfInts; i++) {
+		ints[i] = Math.round(Math.random()*9)+1;
+		document.write(ints[i] + "<br>");
+		if (ints[i] == 1) {
+			quantity1++;
+		} else if (ints[i] == 4) {
+			quantity4++;
+		}
+	}
+	
+	if (quantity1 < quantity4) {
+		document.write("<br>true");
+	} else {document.write("<br><br>false")};
+	
+</script>
+	
+	<p>Given an array of ints, print 'true' if the number of '1's is fewer than the number of '4's.</p>
+	<p>Input Format: The first line contains a single integer, n, denoting the size of the array. Each line i of the n subsequent lines contains a single integer denoting the value of the array at position i.</p>
+	<p>Output Format: Simply the word 'true' or 'false'.</p>
+
+</body>
+</html>
+
+<!-- Given an array of ints, print 'true' if the number of '1's is fewer than the number of '4's.
+
+Input Format
+The first line contains a single integer, n, denoting the size of the array. Each line i of the n subsequent lines contains a single integer denoting the value of the array at position i.
+
+Output Format
+Simply the word 'true' or 'false'. -->
