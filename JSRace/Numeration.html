@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<title>Colored numbers</title>
+<style>
+	html, body {
+  	height: 90%;
+	}
+	#numera {
+		text-align:center;
+		position: relative;
+		top: 50%;
+		font-family: 'Permanent Marker', cursive;
+		font-size: 5rem;
+		margin-top: -2.5rem;
+	}
+</style>
+</head>
+<body onload="coloredNumbers()">
+	
+	<p>Készítsetek egy számláló honlapot. A holnapon legyen egy nagyobb szám, ami a honlap megnyitásakor 0, és minden másodpercben egyel nő. A szám színe minden 10. növekedést követően változzon meg.</p>
+
+	<div id="numera"></div>
+	
+<script>
+	var nmb = 0;
+	var color = ["a", "b", "c", "d", "e", "f"];
+	
+	function coloredNumbers() {
+		document.getElementById('numera').innerHTML = nmb;
+		nmb++;
+		
+		document.getElementById('numera').style.color = ("#" + color[0]+ color[1]+ color[2]+ color[3]+ color[4]+ color[5]);
+		if (nmb%10 == 0) {
+			document.getElementById('numera').style.color = ("#" + color[0]+ color[1]+ color[2]+ color[3]+ color[4]+ color[5]);
+			color.push(color[0]);
+			color.shift()
+		}
+		
+		setTimeout(function() {
+			coloredNumbers();
+		}, 1000);
+	}
+</script>
+</body>
+</html>
+

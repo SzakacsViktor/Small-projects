@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 ransitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="Dashboard.css">
+<script type="text/javascript" src="Dashboard.js" ></script>
+	
+	<script type="text/javascript">
+		var speed = 0;
+		var gear = 0;
+		var rpm = 0;
+		var fuel = 25;
+		var x = 0;
+		var engin = false;
+		var distance = 0;
+	</script>
+	
+<title>Dashboard</title>
+</head>
+<body>
+<div>
+<p>Készítsetek egy honlapot, ami egy jármu muszerfalát utánozza. Az oldalon legyen néhány kijelzo: Egy, ami az aktuális sebességet jeleníti meg, egy ami a fordulatszámát, egy ami a sebességváltó fokozatát, és egy ami az üzemanyag szintjét. Ezek lehetnek egyszeruen számok is</p>
+<ul>
+	<li>Legyen két gomb, amik segítségével a jármu sebességét lehet csökkenteni vagy növelni (mondjuk 10km/h-val).</li>
+	<li>Legyen két gomb, amivel a sebességváltót lehet állítani egyel magasabb vagy alacsonyabb sebességbe.</li>
+	<li>A jármu fordulatszámát úgy kell megjeleníteni, hogy ugyanakkora jármusebesség mellett a váltó nagyobb fokozata kisebb fordulatszámot eredményezzen. (A jármunek 3-as fokozatban nagyobb fordulatszám kell az 50km/h-hoz, mint 4-es fokozatban.) Ugyanakkor ha a váltót nem állítjuk, akkor a sebesség növekedésével arányosan változzon a fordulatszám.</li>
+	<li>Az üzemanyag szintje az ido telésével fokozatosan csökkenjen. A csökkenés mértéke a fordulatszámtól függjön.</li>
+	<li>Legyen egy gomb, amivel tankolni tudunk. Ilyenkor az üzemanyag tartályt teletöltjük, és a program írja ki, hogy mennyi üzemanyagot tankoltunk.</li>
+</ul>
+</div>
+	
+	<div id="wrapper">
+	
+	<form class="board">
+	<fieldset>
+	<legend>:::::::::::::::::::::::::::::::::::::::::::</legend>
+	
+	<form class = "dashboard">
+		<fieldset>
+		<legend id="">Pillanatnyi sebesség</legend>
+			<p class="show" id="speed"> --- </p>
+			
+		<input type="button" value = 'Gázelvétel' onclick = "return accelerator(false)" />
+		<input type="button" value = 'Gázadás' onclick = "return accelerator(true)" />
+		</fieldset>
+	</form>
+	
+	<form class = "dashboard">
+		<fieldset>
+		<legend>Főtengely fordulatszám</legend>
+			<p class="show" id="rpm"> --- </p>
+		</fieldset>
+	</form>
+		
+	</fieldset>
+	</form>
+	
+	<form class="board">
+	<fieldset>
+	<legend>:::::::::::::::::::::::::::::::::::::::::::</legend>
+	
+	<form class = "dashboard">
+		<fieldset>
+			<legend id="">Sebességfokozat</legend>
+			<p class="show" id="gear"> --- </p>
+			
+			<input type="button" value = 'Váltás lefelé' onclick = "return shift(false)" />
+			<input type="button" value = 'Váltás felfelé' onclick = "return shift(true)" />
+		</fieldset>
+	</form>
+	
+	<form class = "dashboard">
+		<fieldset>
+		<legend id="">Üzemanyag szint</legend>
+			<p class="show" id="fuel"> --- </p>
+			
+			<input type="button" value = 'tankolás' onclick = "return fueling()" />
+		</fieldset>
+	</form>
+		
+	</fieldset>
+	</form>
+		
+		<form class = "dashboard">
+		<fieldset>
+		<legend id="">Megtett távolság</legend>
+			<p class="show" id="way"> --- </p>
+		</fieldset>
+	</form>
+	
+	<input type="button" value = 'Indítás' onclick = "return start()" />
+	<input type="button" value = 'Leállítás' onclick = "return stop()" />
+		
+	</div>
+		
+</body>
+</html>
+

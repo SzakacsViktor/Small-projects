@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<title>Scroll</title>
+</head>
+<body onload="scroll()">
+	
+	<div id="display"></div>
+	<p>Készítsetek programot, amely a csapatotok nevét és egy rövid mottót 10 karakter széles helyen, fényreklámszerűen a képernyő közepén mozgatja. A felirat színe is változzon az idő múlásával.</p>
+<style>
+	#display {
+		max-width: 10rem;
+	}
+</style>
+	
+<script>
+	var counter = 10;
+	var st;
+	var stLong="Ez egy jó hosszú szöveg kétszer. Ez egy jó hosszú szöveg kétszer."
+	var stShort  = ["E", "z", " ", "e", "g", "y", " ", "j", "ó", " "];
+	var color = ["a", "b", "c", "d", "e", "f"];
+
+		function scroll() {
+			st = stShort.join("");
+			display.innerText=st;
+			stShort.push(stLong[counter]);
+			stShort.shift();
+			if (counter >= stLong.length) {
+				counter = 0;				
+			} else {counter++;}
+			
+			display.style.color = ("#" + color[0]+ color[1]+ color[2]+ color[3]+ color[4]+ color[5]);
+			color.push(color[0]);
+			color.shift();
+			setTimeout("scroll()", 200);
+	}
+
+</script>
+	
+</body>
+</html>
+

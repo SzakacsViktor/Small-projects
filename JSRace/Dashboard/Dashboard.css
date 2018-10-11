@@ -1,0 +1,12 @@
+.board {
+	float: left;
+	width: 50%;
+}
+
+.dashboard {
+	margin:  .5rem;
+}
+
+#way {
+	width: 30%;
+}
