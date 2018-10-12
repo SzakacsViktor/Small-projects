@@ -1,11 +1,14 @@
 ﻿<!DOCTYPE html>
 <html lang="hu">
 <head>
-<meta name="description" content="Szakács Viktor reszponzív">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="PicViewer.css">
+	
+	<script type="text/javascript">
+		var pics = ["http://i.imgur.com/zW5Djxv.jpg", "http://i.imgur.com/xjnxvq8.jpg", "http://i.imgur.com/eV7ePNo.jpg", "http://i.imgur.com/yLZ3GKW.jpg"];
+		var count = 0;
+	</script>
+	
 	<script type="text/javascript" src="PicViewer.js"></script>
   <title>Pic viewer</title>
 </head>
@@ -20,7 +23,13 @@
         <img src="http://i.imgur.com/eV7ePNo.jpg" alt="Aki különbözni mer" class="pic" onclick="return changePic('http://i.imgur.com/eV7ePNo.jpg');">
         <img src="http://i.imgur.com/yLZ3GKW.jpg" alt="Megint én" class="pic" onclick="return changePic('http://i.imgur.com/yLZ3GKW.jpg');">
       </div>
+			
+			<form>
+				<input type="button" id="prevbtn" class="btn" onclick="return prevPic()" value="Elöző kép">
+				<input type="button" id="nextbtn" class="btn" onclick="return nextPic()" value="Következő kép">
+			</form>
     </div>
+		
     <div class="content">
 			<img src="http://i.imgur.com/eV7ePNo.jpg" alt="Aki különbözni mer" id="bigPic">
     </div>

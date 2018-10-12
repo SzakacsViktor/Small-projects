@@ -57,6 +57,10 @@ p {
   transform: scale(2);
 }
 
+.btn {
+	margin:  .5rem;
+}
+
 #bigPic {
 	margin-bottom: 2%;
 	margin-top: 2%;
