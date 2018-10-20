@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<link rel="stylesheet" type="text/css" href="pizza.css">
+<title>Pizza</title>
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript" src="pizza.js"></script>
+</head>
+<body>
+<form id="pizzaForm" action="#">
+<fieldset>
+<legend id="pizzaFormLegend">Pizza preparation form</legend>
+
+<p>
+	<input id="vegbutton" type="button" name="special_veg" value="Veggie Special">
+	<input id="meatbutton" type="button" name="special_meat" value="Meat Special">
+	<input id="hawbutton" type="button" name="special_hawaiian" value="Hawaiian">
+</p>
+	
+<table id="topping">
+	<tr>
+			<td>Toppings</td><td>Crust</td><td>Pizza size</td></tr>
+	<tr>
+		<td><input type="checkbox" id="topping1" value="Sausage" name="toppingcheck">Sausage</td>
+		<td><input type="radio" name="crust" value="Thin">Thin0</td>
+		<td><input type="radio" name="size" value="Small">Small</td>
+		</tr>
+	<tr>
+		<td><input type="checkbox" id="topping2" value="Pepperoni"	name="toppingcheck">Pepperoni</td>
+		<td><input type="radio" name="crust" value="Regular" checked="checked" />Regular</td>
+		<td><input type="radio" name="size" value="Medium" checked="checked" />Medium</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="topping3" value="Ham"	name="toppingcheck">Ham</td>
+		<td><input type="radio" name="crust" value="Deep Dish">Deep Dish</td>
+		<td><input type="radio" name="size" value="Large">Large</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="topping4" value="Green Peppers"	name="toppingcheck">Green Peppers</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="topping5" value="Mushrooms"	name="toppingcheck">Mushrooms</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="topping6" value="Onions"	name="toppingcheck">Onions</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="topping7" value="Pineapple"	name="toppingcheck">Pineapple</td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+<input type="button" id="prepBtn" name="prepBtn" value="Prep Pizza">
+<p id="orderheading"></p>
+<p id="exercise">Redesign the pizza order system to add the buttons from the original pizza example, enabling the order taker to select the Veggie Special, Meat Special, or Hawaiian pizza types. These buttons should then select the correct topping check boxes for the particular type of pizza to be made. For the Veggie Special pizza, select Green Peppers, Mushrooms, and Onions. For the Meat Special pizza, select Sausage, Pepperoni, and Ham; and for the Hawaiian pizza, select Pineapple and Ham.</p>
+</fieldset>
+</form>
+	
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#prepBtn").on("click",function() {
+			return prepza(this);
+		})
+		
+		$('input[name^=special]').each(function() {
+			$(this).on("click",function() {
+				flip(this);
+			});
+		});
+	});
+	
+</script>
+
+</body>
+</html>
+			 
+<!-- Redesign the pizza order system to add the buttons from the original pizza example, enabling the order taker to select the Veggie Special, Meat Special, or Hawaiian pizza types. These buttons should then select the correct topping check boxes for the particular type of pizza to be made. For the Veggie Special pizza, select Green Peppers, Mushrooms, and Onions. For the Meat Special pizza, select Sausage, Pepperoni, and Ham; and for the Hawaiian pizza, select Pineapple and Ham. -->

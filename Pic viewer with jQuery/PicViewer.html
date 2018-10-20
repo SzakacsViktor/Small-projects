@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="PicViewer.css">
+	
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		var pics = ["http://i.imgur.com/zW5Djxv.jpg", "http://i.imgur.com/xjnxvq8.jpg", "http://i.imgur.com/eV7ePNo.jpg", "http://i.imgur.com/yLZ3GKW.jpg"];
+		var count = 2;
+	</script>
+	
+	<script type="text/javascript" src="PicViewer.js"></script>
+  <title>Pic viewer with jQuery</title>
+</head>
+  
+<body>
+  <div class="fooldal">
+		<p>Készítsetek egy képnézegető honlapot. Az oldal tartalmazzon 4 képet, az oldal tetején, kicsi méretben megjelenítve. A kis kép valamelyikére kattintva a neki megfelelő nagyobb méretű párja jelenjen meg a kis képek alatt. Mindig csak egy kép legyen nagy méretben látható.</p>
+    <div class="head">
+      <div class="pictures">
+        <img src="http://i.imgur.com/zW5Djxv.jpg" alt="Gombóc" class="pic" onclick="return changePic('http://i.imgur.com/zW5Djxv.jpg');">
+        <img src="http://i.imgur.com/xjnxvq8.jpg" alt="Egy szarvas, aki bogár" class="pic" onclick="return changePic('http://i.imgur.com/xjnxvq8.jpg');">
+        <img src="http://i.imgur.com/eV7ePNo.jpg" alt="Aki különbözni mer" class="pic" onclick="return changePic('http://i.imgur.com/eV7ePNo.jpg');">
+        <img src="http://i.imgur.com/yLZ3GKW.jpg" alt="Megint én" class="pic" onclick="return changePic('http://i.imgur.com/yLZ3GKW.jpg');">
+      </div>
+			
+			<form>
+				<input type="button" id="prevbtn" class="btn" onclick="return prevPic()" value="Elöző kép">
+				<input type="button" id="nextbtn" class="btn" onclick="return nextPic()" value="Következő kép">
+			</form>
+    </div>
+		
+    <div class="content">
+			<img src="http://i.imgur.com/eV7ePNo.jpg" alt="Aki különbözni mer" id="bigPic">
+    </div>
+  </div>
+</body>
+</html>
