@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Bean counting</title>
+</head>
+<body>
+<script type="text/javascript">
+/*
+Bean counting.
+Write a function countBs that takes a string as its only argument and returns a number that indicates how many uppercase “B” characters there are in the string.
+Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite countBs to
+make use of this new function.
+*/
+	
+	var txt;
+	var findChar;
+	var numOfBs = 0;
+	var numOfChar = 0;
+	
+	function countBs(txt) {
+		for (let i = 0; i < txt.length; i++) {
+			if (txt.charCodeAt(i) == 66) {
+					numOfBs++;
+					}
+		}
+		return numOfBs;
+	}
+	
+	function countChar(txt, findChar) {
+		for (let i = 0; i < txt.length; i++) {
+			if (txt.charAt(i) === findChar) {
+					numOfChar++;
+					}
+		}
+		return numOfChar;
+	}
+	
+	txt = prompt('Plese enter some text!', 'BbBbB');
+	findChar = prompt('What char should I find? ', 'b');
+	
+	countBs(txt);
+	document.write('Number of Bs: ', numOfBs);
+	
+	document.write('<br> Number of ', findChar, ': ', countChar(txt, findChar));
+
+</script>
+</body>
+</html>
